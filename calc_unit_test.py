@@ -2,7 +2,7 @@ import unittest
 from mycalculator import MathOperations as calc
 
 class TestCalculatorOperations(unittest.TestCase):
-    setUp(self):
+    def setUp(self):
         self.calc = calc() 
 
     def test_addition(self):
