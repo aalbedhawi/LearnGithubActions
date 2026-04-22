@@ -50,6 +50,7 @@ class UserInteractions:
                 actions[user_option](self.numbers)
             else:
                 print("Invalid Selection")
+            print(f"Result: {self.math.final_value}")
 
 
 class MathOperations:
@@ -58,38 +59,37 @@ class MathOperations:
 
     def addition(self, numbers):
         self.final_value = numbers[0] + numbers[1]
-        print(f"Result: {self.final_value}")
+        return self.final_value
 
     def subtraction(self, numbers):
         self.final_value = numbers[0] - numbers[1]
-        print(f"Result: {self.final_value}")
+        return self.final_value
 
     def multiplication(self, numbers):
         self.final_value = numbers[0] * numbers[1]
-        print(f"Result: {self.final_value}")
+        return self.final_value
 
     def division(self, numbers):
         if numbers[1] != 0:
             self.final_value = numbers[0] / numbers[1]
-            print(f"Result: {self.final_value}")
+            return self.final_value
         else:
-            print("Invalid")
+            raise ZeroDivisionError("Cannot divide by zero")
 
     def exponents(self, numbers):
         self.final_value = numbers[0] ** numbers[1]
-        print(f"Result: {self.final_value}")
+        return self.final_value
 
     def square_value(self, number):
         self.final_value = number[0] * number[0]
-        print(f"Result: {self.final_value}")
+        return self.final_value
 
     def square_root(self, number):
         if number[0] >= 0:
             self.final_value = math.sqrt(number[0])
-            print(f"Result: {self.final_value}")
+            return self.final_value
         else:
-            print("Number is negative!")
-
+            raise ValueError("Cannot take the square root of a negative number")
 def main():
     math = MathOperations()
     ui = UserInteractions(math)
