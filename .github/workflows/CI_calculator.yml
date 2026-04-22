@@ -13,9 +13,8 @@ jobs:
       - name: run the tests for the calculator app
         run: python calc_unit_test.py
       - name: send alert on failure to discord channel
-        uses: aalbedhawi/LearnGithubActions@main
+        uses: tsickert/discord-webhook@v7.0.0
         if: failure()  
         with:
-          severity: fail
-          details: "Build Failed, please fix pipeline"
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          content: "Build Failed, please fix pipeline"
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
