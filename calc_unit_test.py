@@ -1,12 +1,13 @@
 import unittest
 from mycalculator import MathOperations as calc
 
+
 class TestCalculatorOperations(unittest.TestCase):
     def setUp(self):
-        self.calc = calc() 
+        self.calc = calc()
 
     def test_addition(self):
-        self.assertEqual(self.calc.addition([2, 3]), 5 )
+        self.assertEqual(self.calc.addition([2, 3]), 5)
 
     def test_subtraction(self):
         self.assertEqual(self.calc.subtraction([5, 2]), 3)
@@ -28,5 +29,6 @@ class TestCalculatorOperations(unittest.TestCase):
         self.assertEqual(self.calc.square_root([16]), 4)
         self.assertRaises(ValueError, self.calc.square_root, [-1])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

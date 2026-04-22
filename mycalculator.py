@@ -1,6 +1,7 @@
 import math
 import sys
 
+
 class UserInteractions:
     def __init__(self, math_operations):
         self.numbers = []
@@ -42,7 +43,16 @@ class UserInteractions:
             if user_option in second_input_responses:
                 self.gather_user_input()
 
-            actions = {"1": self.math.addition , "2": self.math.subtraction , "3": self.math.multiplication, "4": self.math.division, "5": self.math.exponents, "6": self.math.square_value, "7": self.math.square_root, "9": self.quit}
+            actions = {
+                "1": self.math.addition,
+                "2": self.math.subtraction,
+                "3": self.math.multiplication,
+                "4": self.math.division,
+                "5": self.math.exponents,
+                "6": self.math.square_value,
+                "7": self.math.square_root,
+                "9": self.quit,
+            }
 
             if user_option == "8":
                 continue
@@ -90,13 +100,14 @@ class MathOperations:
             return self.final_value
         else:
             raise ValueError("Cannot take the square root of a negative number")
+
+
 def main():
     math = MathOperations()
     ui = UserInteractions(math)
 
     ui.menu()
 
+
 if __name__ == "__main__":
     main()
-
-          
