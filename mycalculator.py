@@ -70,7 +70,7 @@ class MathOperations:
         return self.final_value
 
     def division(self, numbers):
-        if numbers[1] == 0:
+        if numbers[1] != 0:
             self.final_value = numbers[0] / numbers[1]
             return self.final_value
         else:
