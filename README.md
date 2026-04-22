@@ -1,4 +1,4 @@
-# LearnGithubActions
+```# LearnGithubActions
 
 This project was made to learn how the following work and how to build them:
 
@@ -30,4 +30,4 @@ Recommended to use vscode, and the following optional extensions: python, python
 Running both the calculator and unittests can be done via:
   python mycalculator.py
   python calc_unit_test.py
-
+```
