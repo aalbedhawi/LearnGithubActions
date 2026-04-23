@@ -34,3 +34,11 @@ Running both the calculator and unittests can be done via:
   python mycalculator.py
   python calc_unit_test.py
 ```
+### **Code Coverage**
+```
+Name                Stmts   Miss  Cover   Missing                                                 
+-------------------------------------------------
+calc_unit_test.py      38      0   100%
+mycalculator.py        63      0   100%
+```
+Currently all python files are covered with test cases.
