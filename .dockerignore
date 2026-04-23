@@ -1,0 +1,13 @@
+**/__pycache__
+**/.venv
+**/.classpath
+**/.coverage
+**/.dockerignore
+**/.env
+**/.git
+**/.gitignore
+**/.github/workflows
+**/.pre-commit-config.yaml
+**/Dockerfile*
+LICENSE
+README.md
